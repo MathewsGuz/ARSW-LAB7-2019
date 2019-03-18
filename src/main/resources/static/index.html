@@ -27,7 +27,15 @@ and open the template in the editor.
 <body>
 	Movie Searcher:
 	<input type="text" name="LastName" value="" id="movie">
-	<input type="submit" value="Submit"	onclick="ControllerModule.metodoNombre()">
+	<input type="submit" value="Submit"
+		onclick="ControllerModule.metodoNombre()">
+	<table id="table" class=table>
+		<tr style="border: 1px solid black">
+			<th>Name</th>
+			<th>NumFunciones</th>
+		</tr>
+	</table>
+
 	<!--
 	<table style="width: 100%">
 	<tr>
