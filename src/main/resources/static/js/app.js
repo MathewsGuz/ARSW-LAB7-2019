@@ -1,7 +1,18 @@
-var ControllerModule =(function(){
 
-    var privateCinemaByname =function(){
-        var movieName=document.getElementById('movie').value;
-        
-};
+var ControllerModule =(function(){
+	
+	CinemaByname =function(name){	       
+	       console.log(name); 
+	       
+	};
+	
+
+	return {
+		
+		metodoNombre:function (){
+			var movie= $('#movie').val();
+			apimock.getCinemaByName(movie,CinemaByname)
+			
+		}
+	}
 })();
