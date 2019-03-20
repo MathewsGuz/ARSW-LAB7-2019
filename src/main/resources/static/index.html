@@ -7,6 +7,7 @@ and open the template in the editor.
 <html>
 <head>
 <title>cinemas</title>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,48 +15,67 @@ and open the template in the editor.
 <script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="js/app.js"></script>
 <script>
-  function myFunction() {
-    "/js/app.js".innerHTML = "Hello JavaScript!";
-    console.log("hello");
-  }
-  </script>
+	function myFunction() {
+		"/js/app.js".innerHTML = "Hello JavaScript!";
+		console.log("hello");
+	}
+</script>
 <link rel="stylesheet"
 	href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
 <script src="js/apimock.js"></script>
 <script src="js/app.js"></script>
+<style>
+table#Cine {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	text-align: center;
+	padding: 8px;
+}
+
+
+
+th{
+	background-color: #4CAF50;
+	color: white;
+}
+</style>
 </head>
+
+
 <body>
 	Movie Searcher:
 	<input type="text" name="LastName" value="" id="movie">
 	<input type="submit" value="Submit"
-		onclick="ControllerModule.metodoNombre()">
-	<table id="table" class=table>
+		onclick="app.metodoNombre()">
+		
+	<p></p>
+	
+	
+	<table id="Cine" class=table>
+		<tr style="border: 1px solid black">
+			<th colspan="2">Cinema</th>			
+		</tr>
 		<tr style="border: 1px solid black">
 			<th>Name</th>
 			<th>NumFunciones</th>
 		</tr>
 	</table>
+	
+	
+	<table id="funcion" class=table>
+		<tr style="border: 1px solid black">
+			<th colspan="4">Funciones</th>			
+		</tr>
+		<tr style="border: 1px solid black">
+			<th>Name</th>
+			<th>genero</th>
+			<th>asientos</th>
+			<th>fechas</th>
+		</tr>
+	</table>
 
-	<!--
-	<table style="width: 100%">
-	<tr>
-		<th>Cinemas</th>
-		<th>Funcion</th>
-		<th>Sillas</th>
-		<th>Fecha</th>
-	</tr>
-	<tr>
-		<td>Cine Colombia</td>
-		<td>End Game</td>
-		<td>60</td>
-		<td>25-04-2019</td>
-	</tr>
-	<tr>
-		<td>Procinal</td>
-		<td>Dark Phoenix</td>
-		<td>94</td>
-		<td>04-06-2019</td>
-	</tr>
-	</table>-->
 </body>
 </html>
