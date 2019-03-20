@@ -28,32 +28,31 @@ var ControllerModule=(function(){
 					html+='<td>'+asientos + '</td>';
 					html+='<td>'+funciones[i].date + '</td>';
 					html+='</tr>'
-					tabla2.append(html);
-					var isCheck = document.getElementById($(#funciones[i])).checked;
-					if(isCheck){
-						console.log('checked');
-					}
+					tabla2.append(html);					
 				}				
 		 }
+		 else{
+			 alert("cine no encontrado");
+		 }	    
 	    
-	    
-	};
-	
-	SeatsByFunction =function(){
-		console.log("tabla2");
-		var tabla2=$('#funcion');
-		console.log(tabla2);
-	};
-	
+	};	
 
-	return {
-		
+	
+	metodoRest=function(datos){
+		console.log(datos);		
+	};
+
+	return {		
 		metodoNombre:function (){
 			var movie= $('#movie').val();
-			apimock.getCinemaByName(movie,CinemaByname);	
-			
-		}
-	
-		
+			apimock.getCinemaByName(movie,CinemaByname);			
+		},
+		metodoCheck:function () {
+			var checkedValue = document.querySelector('.messageCheckbox:checked').value;			
+	    },
+	    metodoNombreREST:function (){
+	    	var movie= $('#movie').val();
+	    	clienteRest.getCinemaByName(movie,metodoRest);
+	    }	
 	}
 })();
