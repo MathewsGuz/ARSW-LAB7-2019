@@ -25,23 +25,24 @@ and open the template in the editor.
 <script src="js/apimock.js"></script>
 <script src="js/app.js"></script>
 <style>
-table#Cine {
-	border-collapse: collapse;
-	width: 100%;
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
 
 th, td {
-	text-align: center;
-	padding: 8px;
+  text-align: center;
+  padding: 8px;
 }
 
+tr:nth-child(even){background-color: #f2f2f2}
 
-
-th{
-	background-color: #4CAF50;
-	color: white;
+th {
+  background-color: #4CAF50;
+  color: white;
 }
 </style>
+
 </head>
 
 
@@ -49,7 +50,7 @@ th{
 	Movie Searcher:
 	<input type="text" name="LastName" value="" id="movie">
 	<input type="submit" value="Submit"
-		onclick="app.metodoNombre()">
+		onclick="ControllerModule.metodoNombre()">
 		
 	<p></p>
 	
@@ -69,13 +70,14 @@ th{
 		<tr style="border: 1px solid black">
 			<th colspan="4">Funciones</th>			
 		</tr>
-		<tr style="border: 1px solid black">
+		<tr>
 			<th>Name</th>
 			<th>genero</th>
 			<th>asientos</th>
 			<th>fechas</th>
 		</tr>
 	</table>
+	<!-- <button type="button" onclick="ControllerModule.SeatsByFunction()">Buscar Asientos</button> -->
 
 </body>
 </html>
