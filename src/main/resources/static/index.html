@@ -29,20 +29,22 @@ id="funcion" class=table
 <script src="js/apiclient.js"></script>
 <style>
 table {
-  border-collapse: collapse;
-  width: 100%;
+	border-collapse: collapse;
+	width: 100%;
 }
 
 th, td {
-  text-align: center;
-  padding: 8px;
+	text-align: center;
+	padding: 8px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(even) {
+	background-color: #f2f2f2
+}
 
 th {
-  background-color: #4CAF50;
-  color: white;
+	background-color: #4CAF50;
+	color: white;
 }
 </style>
 
@@ -51,27 +53,27 @@ th {
 
 <body>
 	Movie Searcher:
-	<input type="text" name="LastName" value="" id="movie">
+	<input type="text" name="LastName" value="" id="cine">
 	<input type="submit" value="Submit"
 		onclick="ControllerModule.metodoNombreREST()">
-		
+
 	<p></p>
-	
-	
+
+
 	<table id="Cine" class=table>
 		<tr style="border: 1px solid black">
-			<th colspan="2">Cinema</th>			
+			<th colspan="2">Cinema</th>
 		</tr>
 		<tr style="border: 1px solid black">
 			<th>Name</th>
 			<th>NumFunciones</th>
 		</tr>
 	</table>
-	
-	
+
+
 	<table id="funcion" class=table>
 		<tr style="border: 1px solid black">
-			<th colspan="4">Funciones</th>			
+			<th colspan="4">Funciones</th>
 		</tr>
 		<tr>
 			<th>Name</th>
@@ -80,7 +82,11 @@ th {
 			<th>fechas</th>
 		</tr>
 	</table>
-	<button type="button" onclick="ControllerModule.metodoCheck()">Buscar Asientos</button> 
+	<button type="button" onclick="ControllerModule.metodoCheck()">Buscar Asientos</button>
+	
+	<p></p>	
+	<table id="asientos" class=table>
+	</table>
 
 </body>
 </html>

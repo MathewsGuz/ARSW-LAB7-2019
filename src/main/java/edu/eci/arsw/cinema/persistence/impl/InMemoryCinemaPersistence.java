@@ -34,8 +34,8 @@ public class InMemoryCinemaPersistence implements CinemaPersitence{
 		//load stub data
 		String functionDate = "2018-12-18 15:30";
 		List<CinemaFunction> functions= new ArrayList<>();
-		CinemaFunction funct1 = new CinemaFunction(new Movie("SuperHeroes Movie","Action"),functionDate);
-		CinemaFunction funct2 = new CinemaFunction(new Movie("The Night","Horror"),functionDate);
+		CinemaFunction funct1 = new CinemaFunction(new Movie("SuperHeroes_Movie","Action"),functionDate);
+		CinemaFunction funct2 = new CinemaFunction(new Movie("The_Night","Horror"),functionDate);
 		functions.add(funct1);
 		functions.add(funct2);
 		Cinema c=new Cinema("cinemaX",functions);
@@ -44,8 +44,8 @@ public class InMemoryCinemaPersistence implements CinemaPersitence{
                 
                 String functionDate2 = "2018-03-07 20:30";
 		List<CinemaFunction> functionsCC= new ArrayList<>();
-		CinemaFunction funct3 = new CinemaFunction(new Movie("Capitana Marvel","Scifi"),functionDate2);
-		CinemaFunction funct4 = new CinemaFunction(new Movie("End Game","Action"),functionDate2);
+		CinemaFunction funct3 = new CinemaFunction(new Movie("Capitana_Marvel","Scifi"),functionDate2);
+		CinemaFunction funct4 = new CinemaFunction(new Movie("End_Game","Action"),functionDate2);
 		functionsCC.add(funct3);
 		functionsCC.add(funct4);
 		Cinema c1=new Cinema("CineColombia",functionsCC);
@@ -54,7 +54,7 @@ public class InMemoryCinemaPersistence implements CinemaPersitence{
                 String functionDate3 = "2018-03-09 18:30";
                 String functionDate4 = "2018-12-18 16:30";
 		List<CinemaFunction> functionsProcinal= new ArrayList<>();
-		CinemaFunction funct5 = new CinemaFunction(new Movie("EL PASEO 4","Comedy"),functionDate3);
+		CinemaFunction funct5 = new CinemaFunction(new Movie("EL_PASEO 4","Comedy"),functionDate3);
 		CinemaFunction funct6 = new CinemaFunction(new Movie("Como_entrenar_a_tu_dragon_3","Cartoon"),functionDate4);
 		functionsProcinal.add(funct5);
 		functionsProcinal.add(funct6);
@@ -81,16 +81,13 @@ public class InMemoryCinemaPersistence implements CinemaPersitence{
 	public List<CinemaFunction> getFunctionsbyCinemaAndDate(String cinema, String date) {
 		List<CinemaFunction> funciones=new ArrayList<>();
 		Cinema c=cinemas.get(cinema);
-		for(CinemaFunction cf:c.getFunctions()){
-                    //System.out.println("--------------------------------------------------");
-                    //System.out.println(cf.getDate()+" Esta es la fecha parametro "+date+"  "+cf.getDate().equals(date) );
+		for(CinemaFunction cf:c.getFunctions()){;
 			if(cf.getDate().equals(date)){
 				funciones.add(cf);
 
 			}
 		}
-		return funciones;
-		//throw new UnsupportedOperationException("Not supported yet.");
+		return funciones;		
 	}
 	@Override
 	public void saveCinema(Cinema c) throws CinemaPersistenceException {
