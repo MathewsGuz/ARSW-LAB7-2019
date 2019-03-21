@@ -55,7 +55,7 @@ public class InMemoryCinemaPersistence implements CinemaPersitence{
                 String functionDate4 = "2018-12-18 16:30";
 		List<CinemaFunction> functionsProcinal= new ArrayList<>();
 		CinemaFunction funct5 = new CinemaFunction(new Movie("EL PASEO 4","Comedy"),functionDate3);
-		CinemaFunction funct6 = new CinemaFunction(new Movie("Como entrenar a tu dragon 3","Cartoon"),functionDate4);
+		CinemaFunction funct6 = new CinemaFunction(new Movie("Como_entrenar_a_tu_dragon_3","Cartoon"),functionDate4);
 		functionsProcinal.add(funct5);
 		functionsProcinal.add(funct6);
 		Cinema c2=new Cinema("Procinal",functionsProcinal);
