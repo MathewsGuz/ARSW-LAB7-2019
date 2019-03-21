@@ -23,7 +23,7 @@ var ControllerModule=(function(){
 				for(var i =0;i<funciones.length;i++){
 					var asientos=funciones[i].seats.length*funciones[i].seats[0].length;
 					html='<tr>';
-					html+='<td><label class="checkbox" value='+funciones[i]+'>'+funciones[i].movie+'<input type="radio" checked="checked" name="radio"> <span class="checkmark"></span> </label></td>';
+					html+='<td><input type="checkbox" value='+funciones[i]+'>'+funciones[i].movie+' <span class="checkmark"></span> </input></td>';
 					html+='<td>'+funciones[i].movie.genre + '</td>';
 					html+='<td>'+asientos + '</td>';
 					html+='<td>'+funciones[i].date + '</td>';
@@ -61,7 +61,7 @@ var ControllerModule=(function(){
 				for(var i =0;i<funciones.length;i++){
 					var asientos=funciones[i].seats.length*funciones[i].seats[1].length;
 					html='<tr>';
-					html+='<td><label class="checkbox" value='+funciones[i].movie.name+'>'+funciones[i].movie.name+'<input type="radio" checked="checked" name="radio"> <span class="checkmark"></span> </label></td>';
+					html+='<td><input type="checkbox" value='+funciones[i].movie.name+'>'+funciones[i].movie.name+' <span class="checkmark"></span> </input></td>';
 					html+='<td>'+funciones[i].movie.genre + '</td>';
 					html+='<td>'+asientos + '</td>';
 					html+='<td>'+funciones[i].date + '</td>';
@@ -82,7 +82,17 @@ var ControllerModule=(function(){
 		},
 		metodoCheck:function () {
 			var chequear=document.getElementById('SuperHeroes Movie');
-			console.log( chequear);		
+			console.log( chequear);
+                        console.log("si llegueee");
+                        $(document).ready(function() {
+                        $('table [type="checkbox"]').each(function(i, chk) {
+                          if (chk.checked) {
+                            console.log("Checked!", i, chk);
+                          }
+                        });
+
+                      });
+                        console.log("si llegueee X2");
 	    },
 	    metodoNombreREST:function (){
 	    	var movie= $('#movie').val();
