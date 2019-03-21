@@ -61,14 +61,16 @@ var ControllerModule=(function(){
 				for(var i =0;i<funciones.length;i++){
 					var asientos=funciones[i].seats.length*funciones[i].seats[1].length;
                                         console.log(asientos);
-                                        var movie =funciones[i].movie;
+                                        var movie =funciones[i].seats;
+                                        console.log(movie.valueOf());
 					html='<tr>';
-					html+='<td><input type="checkbox" value='+ movie.name +'>'+funciones[i].movie.name+' <span class="checkmark"></span> </input></td>';
+					html+='<td><input type="checkbox" value='+movie+'>'+funciones[i].movie.name+' <span class="checkmark"></span> </input></td>';
 					html+='<td>'+funciones[i].movie.genre + '</td>';
 					html+='<td>'+asientos + '</td>';
 					html+='<td>'+funciones[i].date + '</td>';
 					html+='</tr>'
-					tabla2.append(html);										
+					tabla2.append(html);
+                                        console.log(html);
 				}				
 		 }		 
 		 else{
@@ -89,10 +91,7 @@ var ControllerModule=(function(){
                         $(document).ready(function() {
                         $('table [type="checkbox"]').each(function(i, chk) {
                           if (chk.checked) {
-//                            console.log(chk.value.toString());
                             console.log(chk.value.name);
-//                            console.log(chk.genre);
-//                            console.log(chk.seats.length);
                             console.log("Checked!", i, chk.valueOf());
                           }
                         });
